@@ -1,4 +1,12 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+.subscribe {
+  padding: 62px 20px 63px 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    padding: 72px 367px 72px 366px;
+  }
+}
 .subscribe__title {
   color: #FFF;
   text-align: center;
@@ -10,7 +18,15 @@
   letter-spacing: -0.6px;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .subscribe__title {
+    font-size: 24px;
+    line-height: 1.16; /* 116.667% */
+    letter-spacing: -0.72px;
+  }
+}
 .subscribe__text {
+  width: 467px;
   color: #FFF;
   text-align: center;
   font-family: "Montserrat";
@@ -19,4 +35,28 @@
   font-weight: 400;
   line-height: 1.28; /* 128.571% */
   letter-spacing: -0.28px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__text {
+    width: 326px;
+  }
+}
+.subscribe__btn {
+  display: flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #FD9222;
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    padding: 12px 28px;
+  }
 }/*# sourceMappingURL=index.css.map */

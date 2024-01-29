@@ -1,0 +1,16 @@
+$primary-font: #{'Montserrat', sans-serif};
+
+$colors:(
+    'black-color': #111,
+    'advantages-color': rgba(255, 255, 255, 0.70),
+    'white-color': #FFF,
+    'gray-color': rgba(17, 17, 17, 0.70),
+    'orange-color': #FD9222,
+    'advantages-bg': #1E1823,
+    'layout-bg': #FAFAFA,
+    'hover-color': #FCF1E0,
+);
+
+@function getcolor($key) {
+    @return map-get($colors, $key);
+}

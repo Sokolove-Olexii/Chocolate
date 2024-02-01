@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    &-logo{
+        display: flex;
+        flex-direction: row;
+        &__chocolate{
+
+            &-span{
+
+
+            }
+        }
+
+        &__img{
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    &-menu{
+        width: 28px;
+        height: 28px;
+        background-color: transparent;
+        &__svg{
+            width: 21px;
+            height: 14px;
+        }
+    }
+
+
+    &-navigation{
+        display: none;
+    }
+}
+
+.menu-right{
+    display: none;
+}

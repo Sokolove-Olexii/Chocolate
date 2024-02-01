@@ -1,0 +1,31 @@
+.advantages {
+    padding: 20px;
+    background-color:getcolor('advantages-bg');
+}
+.advantages-list {
+    @include flex();
+    gap: 29px;
+    &__item {
+        @include flex($align-items: flex-start);
+    }
+    &__box {
+        @include flex($justify-content:center);
+        border: 1px solid getcolor('advantages-color');
+        border-radius: 50%;
+        width: 62px;
+       height: 62px;
+    }
+    &__svg {
+        fill: getcolor('orange-color');
+    }
+    &__title {
+        @include fonts($font-size:18px, $font-weight:600);
+        color:getcolor('white-color');
+        padding: 22px 0 18px;
+    }
+    &__text {
+        @include fonts();
+        color: getcolor('advantages-color');
+        letter-spacing: -0.28px;
+    }
+}

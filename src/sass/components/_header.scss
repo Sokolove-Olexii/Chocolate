@@ -6,10 +6,13 @@
         display: flex;
         flex-direction: row;
         &__chocolate{
-
+            font-family:'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+            color: rgba(17, 17, 17);
             &-span{
-
-
+                font-family:'Montserrat',serif;
             }
         }
 

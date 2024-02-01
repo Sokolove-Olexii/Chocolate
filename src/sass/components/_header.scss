@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    &-logo{
+        display: flex;
+        flex-direction: row;
+        &__chocolate{
+            font-family:'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+            color: rgba(17, 17, 17);
+            &-span{
+                font-family:'Montserrat',serif;
+            }
+        }
+
+        &__img{
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    &-menu{
+        width: 28px;
+        height: 28px;
+        background-color: transparent;
+        &__svg{
+            width: 21px;
+            height: 14px;
+        }
+    }
+
+
+    &-navigation{
+        display: none;
+    }
+}
+
+.menu-right{
+    display: none;
+}

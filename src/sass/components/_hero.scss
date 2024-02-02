@@ -1,8 +1,68 @@
-.hero{
-    &-bg{
-        background-image: url('../images/hero/mobile/hero-bg-mobile.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+.hero {
+  display: flex;
+  margin: 14px 0 71px;
+
+  &-bg {
+    padding: 0px 20px 21px;
+    background-image: url('../images/hero/mobile/hero-bg-mobile.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    height: 621px;
+    &__title {
+      color: rgb(255, 255, 255);
+      font-family: 'Montserrat', sans-serif;
+      @include fonts($font-weight: 500, $line-height: 24px, $font-size: 20px);
     }
+  }
+  &-btns {
+    display: flex;
+    flex-direction: row;
+  }
+  &-list {
+    &__btn1 {
+      width: 120px;
+      height: 41px;
+      border-radius: 100px;
+      background-color: getcolor('orange-color');
+
+      color: getcolor('advantages-color');
+      font-family: 'Montserrat', sans-serif;
+      @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
+    }
+    &__btn2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 159px;
+      height: 41px;
+      box-sizing: border-box;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 100px;
+
+      color: getcolor('advantages-color');
+      font-family: 'Montserrat', sans-serif;
+      @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
+    }
+  }
+  &-scroll__down {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    @include fonts($font-weight: 500, $line-height: 14px, $font-size: 12px);
+  }
+  &-scroll__svg {
+    fill: getcolor('orange-color');
+    width: 16px;
+    height: 16px;
+  }
+  &-scroll__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: rgb(255, 255, 255);
+  }
 }

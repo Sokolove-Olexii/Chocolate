@@ -1,0 +1,58 @@
+.taste {
+    padding: 72px 0;
+    background-color: rgb(250, 250, 250);
+}
+.taste-title {
+    color: rgb(17, 17, 17);
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: -3%;
+text-align: center;
+margin-bottom: 24px;
+&__orange {
+    color: getcolor('orange-color');
+}
+}
+.taste-text {
+    @include flex($justify-content:flex-start);
+    color:rgb(17, 17, 17);
+    letter-spacing: -2%;
+text-align: center;
+margin-bottom: 32px;
+}
+.taste-list {
+@include flex();
+&__item:nth-child(2) {
+    background-color: getcolor('advantages-color');
+}
+}
+
+.taste-front {
+     position: relative;
+    width: 335px;
+height: 270px; 
+background-color: getcolor('orange-color');
+border-radius: 5%;
+margin-bottom: 20px;
+&__img {
+        position: absolute;
+    right: 55px;
+ top: 28px;
+    width: 224px;
+height: 171px;
+}
+&__title {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+    @include fonts($font-weight:600);
+    color: rgb(255, 255, 255);
+    letter-spacing: -2%;
+}
+}
+
+.taste-back {
+    display: none;
+}
+

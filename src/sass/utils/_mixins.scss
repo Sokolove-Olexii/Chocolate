@@ -1,4 +1,4 @@
-@mixin flex($justify-content:space-between, $align-items:center, $flex-dir:column, $wrap:nowrap){
+@mixin flex($justify-content:space-between, $align-items:center, $flex-dir:row, $wrap:nowrap){
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
@@ -6,9 +6,10 @@
     flex-wrap: $wrap;
 }
 
-@mixin fonts($font-size:14px, $font-weight:400, $line-height:normal, $font-style:normal){
+@mixin fonts($font-size:14px, $font-weight:400, $line-height:normal, $font-style:normal, $letter-spacing:-0.28px){
 font-size: $font-size;
 font-weight: $font-weight;
 line-height: $line-height;
 font-style: $font-style;
+letter-spacing: $letter-spacing;
 }

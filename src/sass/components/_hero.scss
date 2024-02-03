@@ -3,7 +3,7 @@
   margin: 14px 0 71px;
 
   &-bg {
-    padding: 0px 20px 21px;
+    padding: 395px 20px 21px 20px;
     background-image: url('../images/hero/mobile/hero-bg-mobile.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +11,9 @@
     border-radius: 30px;
     height: 621px;
     &__title {
+      display: flex;
+      width: 299px;
+      margin-bottom: 31px;
       color: rgb(255, 255, 255);
       font-family: 'Montserrat', sans-serif;
       @include fonts($font-weight: 500, $line-height: 24px, $font-size: 20px);
@@ -18,10 +21,14 @@
   }
   &-btns {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
   &-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
     &__btn1 {
+      margin-right: 14px;
       width: 120px;
       height: 41px;
       border-radius: 100px;
@@ -46,7 +53,14 @@
       @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
     }
   }
+  &-scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   &-scroll__down {
+    margin-right: 12px;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
     @include fonts($font-weight: 500, $line-height: 14px, $font-size: 12px);

@@ -1,7 +1,11 @@
 .subscribe {
     padding: 62px 20px 63px 20px;
-    
+    background-image: url("../images/subscribe/mobile/explore-mobile.jpg"); 
+    @extend %bg-img;
+
     @media screen and (min-width: 1200px) {
+        background-image: url("../images/subscribe/desktop/explore@1x.jpg");
+        background-image: url("../images/subscribe/desktop/2x/explore@2x.jpg");
         padding: 72px 367px 72px 366px;
     }
 
@@ -9,54 +13,42 @@
     &__title {
         color: #FFF;
         text-align: center;
-        font-family: 'Montserrat';
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.20; /* 120% */
-        letter-spacing: -0.6px;
         text-transform: uppercase;
+        margin: 0 auto 24px;
+        @include fonts(20px, 600, 1.2, normal, -0.6px);
 
-        @media screen and (min-width: 1200px){
-            font-size: 24px;
-            line-height: 1.16; /* 116.667% */
-            letter-spacing: -0.72px;
+        @media screen and (min-width: 768px){
+            @include fonts(24px, 600, 1.16, normal, -0.72px);
+            margin-bottom: 28px;
         }
     }
 
     &__text {
-        width: 467px;
-        color: #FFF;
+        max-width: 326px;
+        color: getcolor('white-color');
+        @include fonts();
         text-align: center;
-        font-family: 'Montserrat';
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.28; /* 128.571% */
-        letter-spacing: -0.28px;
 
-        @media screen and (min-width: 1200px) {
-            width: 326px;
+        @media screen and (min-width: 768px) {
+            max-width: 467px;
         }
     }
  
 
     &__btn {
-        display: flex;
-        padding: 14px 40px;
-        align-items: flex-start;
-        gap: 14px;
+        padding: 12px 28px;
         border-radius: 100px;
-        background: #FD9222;
-        color: #FFF;
+        background-color: getcolor('orange-color');
+        color: getcolor('white-color');
         font-family: 'Montserrat';
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+         
 
-        @media screen and (min-width: 1200px) {
-            padding: 12px 28px;
+        @media screen and (min-width: 768px) {
+            padding: 14px 40px;
         }
     }
 }

@@ -1,0 +1,19 @@
+%bg-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%orange-btn{
+    font-weight: 600;
+    font-size: 14px;
+    color: getcolor('white-color');
+    border-radius: 100px;
+    background-color: getcolor('orange-color');
+}

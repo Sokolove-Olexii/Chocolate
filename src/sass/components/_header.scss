@@ -1,50 +1,97 @@
-.header{
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  &-logo {
+    display: flex;
+    flex-direction: row;
+    @media screen and (min-width: 1200px) {
+      margin-right: 188px;
+    }
+    &__chocolate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(17,17,17);
+      @include fonts($font-weight: 700, $line-height: 18px, $font-size: 14px);
+      @media screen and (min-width: 1200px) {
+        @include fonts($font-weight: 700, $line-height: 20px, $font-size: 18px);
+      }
+      &-span {
+        display: block;
+        margin-right: 3px;
+        font-family: 'Montserrat', Italic;
+      }
+    }
+
+    &__img {
+      margin-left: 4px;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &-menu {
+
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    @media screen and (min-width: 1200px) {
+        display: none;
+      }
+    &__svg {
+      width: 21px;
+      height: 14px;
+    }
+  }
+
+  &-navigation {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+}
+
+.navigation-list {
+  @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
-    width: 100%;
-    padding-top: 20px;
-    &-logo{
-        display: flex;
-        flex-direction: row;
-        &__chocolate{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family:'Montserrat', sans-serif;
-            @include fonts($font-weight:700, $line-height:18px, $font-size:14px);
-            color: rgba(17, 17, 17);
-            &-span{
-                display: block;
-                margin-right: 3px;
-                font-family:'Montserrat', Italic;
-            }
-        }
-
-        &__img{
-            margin-left: 4px;
-            width: 21px;
-            height: 21px;
-        }
-    }
-
-    &-menu{
-        width: 28px;
-        height: 28px;
-        background-color: transparent;
-        &__svg{
-            width: 21px;
-            height: 14px;
-        }
-    }
-
-
-    &-navigation{
-        display: none;
-    }
+    flex-direction: row;
+    gap: 24px;
+    width: 532px;
+  }
+  &__link {
+    color: getcolor('black-color');
+    @include fonts($font-weight: 500, $line-height: 16px, $font-size: 14px);
+  }
 }
 
-.menu-right{
-    display: none;
+.menu-right {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    width: 66px;
+    margin-left: 137px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__twit{
+    width: 22px;
+    height: 18px;
+  }
+
+  &__inst{
+    width: 20px;
+    height: 20px;
+  }
+
 }
+

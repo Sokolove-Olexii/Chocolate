@@ -1,20 +1,36 @@
 .hero {
   display: flex;
   margin: 14px 0 71px;
+  @media screen and (min-width: 1200px) {
+    margin: 52px 0 52px;
+  }
 
   &-bg {
+    height: 621px;
     padding: 395px 20px 21px 20px;
     background-image: url('../images/hero/mobile/hero-bg-mobile.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 30px;
-    height: 621px;
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       height: 890px;
       padding: 671px 40px 40px 40px;
       background-image: url('../images/hero/tablet/hero-bg-tablet.jpg');
     }
+    @media screen and (min-width: 1200px) {
+      height: 600px;
+      padding: 381px 40px 40px 40px;
+      background-image: url('../images/hero/desktop/hero-bg-desktop@1x.jpg');
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (-o-min-device-pixel-ratio: 2/1),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/desktop/2x/hero-bg-desktop@2x.jpg');
+      }
+    }
+
     &__title {
       display: flex;
       max-width: 299px;
@@ -22,7 +38,7 @@
       color: rgb(255, 255, 255);
       font-family: 'Montserrat', sans-serif;
       @include fonts($font-weight: 500, $line-height: 24px, $font-size: 20px);
-      @media screen and (min-width:768px){
+      @media screen and (min-width: 768px) {
         max-width: 484px;
         @include fonts($line-height: 34px, $font-size: 28px);
       }
@@ -31,7 +47,7 @@
   &-btns {
     display: flex;
     flex-wrap: wrap;
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       flex-wrap: nowrap;
     }
@@ -46,7 +62,6 @@
       height: 41px;
       border-radius: 100px;
       background-color: getcolor('orange-color');
-
       color: getcolor('advantages-color');
       font-family: 'Montserrat', sans-serif;
       @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
@@ -60,13 +75,9 @@
       box-sizing: border-box;
       border: 1px solid rgb(255, 255, 255);
       border-radius: 100px;
-
       color: getcolor('advantages-color');
       font-family: 'Montserrat', sans-serif;
       @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
-      @media screen and (min-width:768px){
-        margin-right: 153px;
-      }
     }
   }
   &-scroll {
@@ -75,13 +86,21 @@
     align-items: center;
     justify-content: center;
     height: 38px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 153px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 585px;
+    }
   }
   &-scroll__down {
     margin-right: 12px;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
     @include fonts($font-weight: 500, $line-height: 14px, $font-size: 12px);
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       margin-right: 14px;
       @include fonts($line-height: 18px, $font-size: 14px);
     }
@@ -90,6 +109,14 @@
     fill: getcolor('orange-color');
     width: 16px;
     height: 16px;
+    @media screen and (min-width: 768px) {
+      width: 22px;
+      height: 22px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 22px;
+      height: 22px;
+    }
   }
   &-scroll__link {
     display: flex;
@@ -98,7 +125,7 @@
     border-radius: 50%;
     width: 28px;
     height: 28px;
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       width: 38px;
       height: 38px;
     }

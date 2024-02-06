@@ -3,10 +3,10 @@
     background-color:getcolor('advantages-bg');
 }
 .advantages-list {
-    @include flex();
+    @include flex($wrap:wrap);
     gap: 29px;
     &__item {
-        @include flex($align-items: flex-start);
+        max-width: 308px;
     }
     &__box {
         @include flex($justify-content:center);
@@ -21,11 +21,10 @@
     &__title {
         @include fonts($font-size:18px, $font-weight:600);
         color:getcolor('white-color');
-        padding: 22px 0 18px;
+        margin: 22px 0 18px;
     }
     &__text {
         @include fonts();
         color: getcolor('advantages-color');
-        letter-spacing: -0.28px;
     }
 }

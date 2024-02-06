@@ -22,23 +22,68 @@ text-align: center;
 margin-bottom: 32px;
 }
 .taste-list {
-@include flex();
-&__item:nth-child(2) {
+@include flex($wrap:wrap);
+&__item {
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+    flex-basis: 100%;
+    &:hover .taste-back {
+        transform: translateY(0);
+        transition: transform 1s ease;
+    }
+@media screen and (min-width:768px){
+    flex-basis:calc((100% - 32px) / 2);
+}
+@media screen and (min-width: 1200px) {
+    flex-basis:calc((100% - 57px) / 4);
+}
+&:nth-child(1) {
+    background-color: getcolor('orange-color');
+    color: getcolor('white-color');
+}
+&:nth-child(2) {
     background-color: getcolor('advantages-color');
+    color: getcolor('black-color');
+    border: 1px solid getcolor('orange-color');
+    @media screen and (min-width:768px) and (max-width:1199px){
+        order:3;
+    }
+    &:hover {
+        border-color: none;
+    }
+}
+&:nth-child(3) {
+    background-color: getcolor('advantages-bg');
+    color: getcolor('white-color');
+    @media screen and (min-width:768px) and (max-width:1199px){
+        order:4;
+    }
+}
+&:nth-child(4) {
+    background-color: getcolor('advantages-color');
+    color: getcolor('black-color');
+    border: 1px solid getcolor('orange-color');
+    @media screen and (min-width:768px) and (max-width:1199px){
+        order:2;
+    }
+    &:hover {
+        border-color: none;
+    }
 }
 }
 
+gap: 20px;
+}
+
 .taste-front {
-     position: relative;
+    
     width: 335px;
 height: 270px; 
-background-color: getcolor('orange-color');
-border-radius: 5%;
-margin-bottom: 20px;
+// background-color: getcolor('orange-color');
+
 &__img {
-        position: absolute;
-    right: 55px;
- top: 28px;
+        margin: 28px 55px 0 55px;
     width: 224px;
 height: 171px;
 }
@@ -47,12 +92,56 @@ height: 171px;
     left: 28px;
     bottom: 28px;
     @include fonts($font-weight:600);
-    color: rgb(255, 255, 255);
+    // color:inherit;
     letter-spacing: -2%;
 }
 }
 
 .taste-back {
-    display: none;
-}
+//  display: none;
+    width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 28px;
+   background-color: getcolor('white-color');
+   transform: translateY(-100%);
+    &__title {
+        @include fonts($font-size:18px, $font-weight:600, $letter-spacing: -0.03em);
+        color: getcolor('black-color');
+        margin-bottom: 8px;
+    }
+    &__filters {
+        @include flex($align-items:flex-start);
+        max-width: 180px;
+        max-height: 24px;
+        margin-bottom: 14px;
+    }
+    &__type {
+        width: 81px;
+height: 24px;
+text-align: center;
+background-color: getcolor('orange-color');
+color: getcolor('white-color');
+border-radius: 35px;
+@include fonts($font-size:10px, $letter-spacing: 0%);
+    }
+    &__benefits {
+        width: 93px;
+height: 24px;
+text-align: center;
+background-color: getcolor('white-color');
+color: getcolor('black-color');
+border: 1px solid getcolor('orange-color');
+border-radius: 35px;
+@include fonts($font-size:10px, $letter-spacing: 0%);
+    }
+    &__text {
+        @include fonts($letter-spacing: -0.02em);
+        overflow:auto;
+        color: getcolor('black-color');
+    }
+    }
+    
 

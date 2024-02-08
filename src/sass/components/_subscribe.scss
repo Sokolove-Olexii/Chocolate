@@ -11,7 +11,7 @@
 
 
     &__title {
-        color: #FFF;
+        color: getcolor('white-color');
         text-align: center;
         text-transform: uppercase;
         margin: 0 auto 24px;
@@ -26,11 +26,16 @@
     &__text {
         max-width: 326px;
         color: getcolor('white-color');
-        @include fonts();
+        @include fonts(-0.2px);
         text-align: center;
 
         @media screen and (min-width: 768px) {
+            @include fonts(-0.2px);
             max-width: 467px;
+        }
+
+        @media screen and ( min-width: 1200px) {
+            @include fonts(-0.02em);
         }
     }
  
@@ -41,13 +46,16 @@
         background-color: getcolor('orange-color');
         color: getcolor('white-color');
         font-family: 'Montserrat';
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+        @include fonts(18, 600,);
          
 
         @media screen and (min-width: 768px) {
+            @include fonts(14,600);
+            padding: 14px 40px;
+        }
+
+        @media screen and ( min-width: 1200px) {
+            @include fonts(18px);
             padding: 14px 40px;
         }
     }

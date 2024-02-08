@@ -9,9 +9,7 @@
     height: 621px;
     padding: 395px 20px 21px 20px;
     background-image: url('../images/hero/mobile/hero-bg-mobile.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @extend %bg-img;
     border-radius: 30px;
     @media screen and (min-width: 768px) {
       height: 890px;
@@ -57,14 +55,12 @@
     flex-direction: row;
     margin-bottom: 32px;
     &__btn1 {
-      margin-right: 14px;
       width: 120px;
       height: 41px;
-      border-radius: 100px;
-      background-color: getcolor('orange-color');
-      color: getcolor('advantages-color');
       font-family: 'Montserrat', sans-serif;
-      @include fonts($font-weight: 600, $line-height: 17px, $font-size: 14px);
+      margin-right: 14px;
+      @extend %orange-btn;
+      @include fonts($line-height: 17px);
     }
     &__btn2 {
       display: flex;
@@ -81,10 +77,8 @@
     }
   }
   &-scroll {
-    display: flex;
+    @extend %center;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     height: 38px;
 
     @media screen and (min-width: 768px) {
@@ -119,9 +113,7 @@
     }
   }
   &-scroll__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %center;
     border-radius: 50%;
     width: 28px;
     height: 28px;

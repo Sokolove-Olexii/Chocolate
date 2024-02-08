@@ -12,9 +12,7 @@
       margin-right: 188px;
     }
     &__chocolate {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @extend %center;
       font-family: 'Montserrat', sans-serif;
       color: rgba(17,17,17);
       @include fonts($font-weight: 700, $line-height: 18px, $font-size: 14px);

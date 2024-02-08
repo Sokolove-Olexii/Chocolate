@@ -1,35 +1,32 @@
 .sellers {
     padding: 77px 30px 77px;
 
-    @media screen and (min-width: 1200px) {}
+    
 
     &__title {
         margin: 0 auto 37px;
         text-align: center;
-        position: static;
         width: 134px;
         height: 24px;
         display: flex;
-        flex-grow: 0;
         margin: 32px 0px;
 
-        @media screen and (min-width: 1200px) {}
+        
     }
 
     &__span {
         color: #FD9222;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         font-weight: 600;
         line-height: 24px;
-        letter-spacing: -3%;
         text-align: center;
         text-transform: uppercase;
 
-        @media screen and (min-width: 1200px) {}
+        
     }
-
 }
+
 
 .sellers-list {
     &__img {
@@ -39,12 +36,11 @@
         margin: 0px 20px;
         border-radius: 15px;
 
-        @media screen and (min-width: 1200px) {}
+        
     }
 
     &__info {
         margin: 0 auto 32px;
-        position: static;
         width: 306px;
         height: 90px;
         display: flex;
@@ -52,30 +48,25 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding: 0px;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
         margin: 20px 0px;
 
-        @media screen and (min-width: 1200px) {}
+        
     }
 
     &__buy {
         margin: 0 auto 72px;
-        background: #FD9222;
-        color: #FFF;
+        background-color:getcolor('orange-color');
+        color:getcolor('white-color');
         border-radius: 100px;
         font-size: 18px;
         padding: 14px 40px;
         gap: 14px;
-        display: flex;
         align-items: flex-start;
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         line-height: normal;
         font-weight: 600;
 
-        @media screen and (min-width: 1200px) {
-        }
+        
     }
 }

@@ -37,7 +37,7 @@
     }
 
     &__span {
-        color: #FD9222;
+        color: getcolor('orange-color');
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         font-weight: 600;
@@ -91,18 +91,16 @@
     }
 
     &__buy {
-        color: $title-color;
         font-size: 18px;
         font-weight: 600;
         line-height: normal;
         border-radius: 100px;
-        background: $accent-color;
+        background: getcolor('orange-color');
         border: none;
         width: 120px;
         height: 41px;
 
         @media screen and (min-width: 768px) {
-            position: static;
             display: flex;
             align-items: center;
             width: 162px;

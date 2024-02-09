@@ -5,24 +5,39 @@
         padding: 106px 32px 105px;
     }
 
+    @media screen and (min-width:1200px) {
+        padding: 133px 33px 133px;
+    }
+
 
     &__title {
-        margin: 0 auto 37px;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 32px;
         text-align: center;
         width: 134px;
         height: 24px;
         display: flex;
+        font-weight: 600;
         margin: 32px 0px;
 
-        @media screen and (min-width:768px) {
+        @media screen and (min-width: 768px) {
             font-size: 24px;
-            line-height: 1.3px;
+            line-height: 28px;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (min-width:1200px) {
+            font-size: 24px;
+            line-height: 1.2px;
+
         }
 
     }
 
     &__span {
-        color: #FD9222;
+        color: getcolor('orange-color');
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         font-weight: 600;
@@ -35,52 +50,67 @@
 
 
 .sellers-list {
+    display: flex;
+
     &__img {
         margin: 0 auto 23px;
-        width: 335px;
+        width: 100%;
         height: 464px;
         margin: 0px 20px;
         border-radius: 15px;
 
         @media screen and (min-width:768px) {
-            width: 704px;
-            height: 464px;
+            width: 344px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 368px;
         }
     }
 
     &__info {
-        margin: 0 auto 32px;
-        width: 306px;
-        height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0px;
-        margin: 20px 0px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 32px;
+        max-width: 290px;
 
+        @media screen and (min-width: 375px) {
+            max-width: 306px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 407px;
+        }
     }
 
     &__buy {
-        margin: 0 auto 72px;
-        background-color: getcolor('orange-color');
-        color: getcolor('white-color');
-        border-radius: 100px;
         font-size: 18px;
-        padding: 14px 40px;
-        gap: 14px;
-        align-items: flex-start;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        line-height: normal;
         font-weight: 600;
+        line-height: normal;
+        border-radius: 100px;
+        background: getcolor('orange-color');
+        border: none;
+        width: 120px;
+        height: 41px;
 
-        @media screen and (min-width:768px) {
-            padding: 14px 40px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
             width: 162px;
             height: 50px;
+            padding-right: 40px;
+            padding-left: 40px;
         }
 
-
+        @media screen and (min-width: 1200px) {
+            margin-left: auto;
+        }
     }
 }

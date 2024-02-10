@@ -54,6 +54,44 @@
         margin-bottom: 31px;
     }
 
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding-top: 56px;
+        padding-right: 18px;
+        padding-bottom: 26px;
+        padding-left: 18px;
+        border-radius: 15px;
+        border: 1px solid $controls-color;
+        width: 360px;
+        height: 200px;
+
+        &:first-child {
+            padding-bottom: 42px;
+        }
+
+        &:nth-child(4) {
+            padding-bottom: 42px;
+        }
+
+        &:last-child {
+            padding-bottom: 42px;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+    }
+
+
     &__img {
         border-radius: 100%;
         max-width: 80px;

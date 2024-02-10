@@ -52,6 +52,35 @@
 .sellers-list {
     display: flex;
 
+    &__item {
+        margin-right: auto;
+        margin-left: auto;
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:last-child {
+            display: none;
+            margin-right: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-right: 16px;
+
+            &:nth-child(2) {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            &:last-child {
+                display: flex;
+                margin-right: 0;
+            }
+        }
+    }
+
     &__img {
         margin: 0 auto 23px;
         width: 100%;

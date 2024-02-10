@@ -2,6 +2,7 @@
     background-color: getcolor ('advantages-bg');
     
     &__title {
+        font-family: "Montserrat", sans-serif;
         color: getcolor ('white-color');
         @include fonts(24px, 500, 117%,-0.02em);
 
@@ -20,12 +21,19 @@
     }
 
     &__text {
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 14px;
-        line-height: 129%;
         text-align: center;
         color: getcolor ('white-color');
         @include fonts(129%,);
+    }
+
+    &__address {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        color: getcolor ('white-color');
+        @include fonts(129%, -0.02em)
     }
     
 }

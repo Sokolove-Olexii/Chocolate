@@ -1,3 +1,39 @@
 .footer, .inner-container {
+    background-color: getcolor('advantages-bg');
+    
+    &__title {
+        font-family: "Montserrat", sans-serif;
+        color: getcolor('white-color');
+        @include fonts(24px, 500, 117%,-0.02em);
+
+        @media screen and (min-width: 768px) {
+            @include fonts(28px, 500, 121%,-0.02em);
+        }
+
+    &__title--orange {
+        color: getcolor('orange-color');
+        @include fonts(24px, 500, 117%,-0.02em);
+
+        @media screen and (min-width: 768px) {
+            @include fonts(28px, 500, 121%,-0.02em);
+        }
+    }
+    }
+
+    &__text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: getcolor('white-color');
+        @include fonts(129%,);
+    }
+
+    &__address {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        color: getcolor('white-color');
+        @include fonts(129%, -0.02em)
+    }
     
 }

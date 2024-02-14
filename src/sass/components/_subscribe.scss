@@ -1,62 +1,60 @@
 .subscribe {
-    padding: 62px 20px 63px 20px;
-    background-image: url("../images/subscribe/mobile/explore-mobile.jpg"); 
-    @extend %bg-img;
+  padding: 62px 20px 63px 20px;
+  background-image: url('../images/subscribe/mobile/explore-mobile.jpg');
+  @extend %bg-img;
+
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/subscribe/desktop/explore@1x.jpg');
+    padding: 72px 367px 72px 366px;
+  }
+
+  &__title {
+    color: getcolor('white-color');
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 24px;
+    @include fonts(20px, 600, 1.2, normal, -0.6px);
+
+    @media screen and (min-width: 768px) {
+      @include fonts(24px, 600, 1.16, normal, -0.72px);
+      margin-bottom: 28px;
+    }
+  }
+
+  &__text {
+    max-width: 326px;
+    color: getcolor('white-color');
+    text-align: center;
+    margin: 0 auto 24px;
+    @include fonts(-0.2px);
+
+    @media screen and (min-width: 768px) {
+      @include fonts(-0.2px);
+      max-width: 467px;
+    }
 
     @media screen and (min-width: 1200px) {
-        background-image: url("../images/subscribe/desktop/explore@1x.jpg");
-        background-image: url("../images/subscribe/desktop/2x/explore@2x.jpg");
-        padding: 72px 367px 72px 366px;
+      @include fonts(-0.02em);
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    padding: 12px 28px;
+    border-radius: 100px;
+    background-color: getcolor('orange-color');
+    color: getcolor('white-color');
+    font-family: 'Montserrat', sans-serif;
+    @include fonts(18, 600);
+
+    @media screen and (min-width: 768px) {
+      @include fonts(14, 600);
+      padding: 14px 40px;
     }
 
-
-    &__title {
-        color: getcolor('white-color');
-        text-align: center;
-        text-transform: uppercase;
-        margin: 0 auto 24px;
-        @include fonts(20px, 600, 1.2, normal, -0.6px);
-
-        @media screen and (min-width: 768px){
-            @include fonts(24px, 600, 1.16, normal, -0.72px);
-            margin-bottom: 28px;
-        }
+    @media screen and (min-width: 1200px) {
+      @include fonts(18px);
+      padding: 14px 40px;
     }
-
-    &__text {
-        max-width: 326px;
-        color: getcolor('white-color');
-        @include fonts(-0.2px);
-        text-align: center;
-
-        @media screen and (min-width: 768px) {
-            @include fonts(-0.2px);
-            max-width: 467px;
-        }
-
-        @media screen and ( min-width: 1200px) {
-            @include fonts(-0.02em);
-        }
-    }
- 
-
-    &__btn {
-        padding: 12px 28px;
-        border-radius: 100px;
-        background-color: getcolor('orange-color');
-        color: getcolor('white-color');
-        font-family: 'Montserrat';
-        @include fonts(18, 600,);
-         
-
-        @media screen and (min-width: 768px) {
-            @include fonts(14,600);
-            padding: 14px 40px;
-        }
-
-        @media screen and ( min-width: 1200px) {
-            @include fonts(18px);
-            padding: 14px 40px;
-        }
-    }
+  }
 }

@@ -23,12 +23,14 @@
             margin-bottom: 50px;
             line-height: 1.16;
             letter-spacing: -0.72px;
+
+        }
+
+        &--chocolate {
+            color: getcolor('orange-color');
         }
     }
 
-    &--chocolate{
-        color: getcolor('orange-color');
-    }
 
     &__btn {
         margin: 32px auto 0;
@@ -99,7 +101,7 @@
         top: -42px;
         left: 50%;
         transform: translatex(-50%);
-        
+
     }
 
     &__title {
@@ -121,11 +123,13 @@
         @include fonts(14px, 400, 1.29);
     }
 }
-.reviews-slider{
+
+.reviews-slider {
     position: relative;
     padding-top: 42px;
     height: 284px;
-    @media screen and (min-width: 768px){
+
+    @media screen and (min-width: 768px) {
         height: 295px;
     }
 }

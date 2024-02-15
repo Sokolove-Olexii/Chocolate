@@ -11,31 +11,23 @@
 
 
     &__title {
-        text-transform: uppercase;
-        margin-bottom: 32px;
+        color: getcolor('black-color');
         text-align: center;
-        width: 134px;
-        height: 24px;
-        display: flex;
-        margin: 32px 0px;
-        @include fonts(20px, 600, 1.2px, normal, -0.03em);
+        margin-bottom: 32px;
+        @include fonts(20px, 600, 1.2, normal, -0.03em);
+        text-transform: uppercase;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width:768px) {
             font-size: 24px;
-            line-height: 28px;
             margin-bottom: 50px;
-        }
-
-        @media screen and (min-width:1200px) {
-            font-size: 24px;
-            line-height: 1.2px;
+            line-height: 1.16;
+            letter-spacing: -0.72px;
 
         }
 
-    }
-
-    &__orange {
-        color: getcolor('orange-color');
+        &--top {
+            color: getcolor('orange-color');
+        }
     }
 }
 

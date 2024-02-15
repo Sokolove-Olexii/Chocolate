@@ -23,12 +23,14 @@
             margin-bottom: 50px;
             line-height: 1.16;
             letter-spacing: -0.72px;
+
+        }
+
+        &--chocolate {
+            color: getcolor('orange-color');
         }
     }
 
-    &--chocolate{
-        color: getcolor('orange-color');
-    }
 
     &__btn {
         margin: 32px auto 0;
@@ -66,7 +68,7 @@
         padding-bottom: 26px;
         padding-left: 18px;
         border-radius: 15px;
-        border: 1px solid getcolor(black-color);
+        border: 1px solid getcolor('black-color');
         width: 335px;
         height: 200px;
         box-shadow: 0 9px 27px 0 rgba(215, 228, 249, 0.25);
@@ -99,7 +101,7 @@
         top: -42px;
         left: 50%;
         transform: translatex(-50%);
-        
+
     }
 
     &__title {
@@ -121,11 +123,13 @@
         @include fonts(14px, 400, 1.29);
     }
 }
-.reviews-slider{
+
+.reviews-slider {
     position: relative;
     padding-top: 42px;
     height: 284px;
-    @media screen and (min-width: 768px){
+
+    @media screen and (min-width: 768px) {
         height: 295px;
     }
 }

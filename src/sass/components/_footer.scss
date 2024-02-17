@@ -1,39 +1,66 @@
-.footer .inner-container {
+.footer {
+    padding: 35px 0 32px;
     background-color: getcolor('advantages-bg');
+
+    @media screen and (min-width: 768px) {
+        padding: 50px 0;
+    }
     
     &__title {
         font-family: "Montserrat", sans-serif;
         color: getcolor('white-color');
-        @include fonts(24px, 500, 117%,-0.02em);
+        margin-bottom: 32px;
+        max-width: 300px;
+        @include fonts(24px, 500, 1.17,-0.02em);
 
         @media screen and (min-width: 768px) {
-            @include fonts(28px, 500, 121%,-0.02em);
+            @include fonts(28px, 500, 1.21,-0.02em);
+            margin-bottom: 0;
+            margin-right: 124px;
         }
 
-    &__title--orange {
+        @media screen and (min-width: 1200px) {
+            margin-right: 543px;
+        }
+
+    &--orange {
         color: getcolor('orange-color');
-        @include fonts(24px, 500, 117%,-0.02em);
+    }
+    }
+
+    .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         @media screen and (min-width: 768px) {
-            @include fonts(28px, 500, 121%,-0.02em);
+            padding-bottom: 50px;
         }
     }
+
+    .footer-contacts {
+
+        &__title {
+            font-family: "Montserrat", sans-serif;
+            color: getcolor('white-color');
+            margin-bottom: 14px;
+            @include fonts(14px, 500,  1.29);
+        }
+
     }
 
-    &__text {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        text-align: center;
-        color: getcolor('white-color');
-        @include fonts(129%,);
-    }
+    .contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
 
-    &__address {
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        color: getcolor('white-color');
-        @include fonts(129%, -0.02em)
+        &__address {
+            font-family: "Montserrat", sans-serif;
+            color: getcolor('white-color');
+            @include fonts(1.29, -0.02em);
+        }
     }
 
     &__svg {

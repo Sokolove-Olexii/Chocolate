@@ -1,3 +1,61 @@
-.mobile-menu{
-    display: none;
-}
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: rgb(30, 24, 35);
+    padding: 156px 32px 24px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    gap: 100px;
+    &__socials{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 66px;
+      height: 24px;
+    }
+  }
+
+  .mobile__socials-svg{
+    width: 20px;
+    height: 20px;
+    fill: getcolor('white-color');
+  }
+  
+  .mobile__svg {
+    width: 12px;
+    height: 12px;
+    fill: getcolor('white-color');
+  }
+  
+  .mobile__btn {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__link {
+      color: rgb(255, 255, 255);
+      font-family: 'Montserrat', sans-serif;
+      @include fonts($font-weight: 500, $line-height: 16px, $font-size: 14px);
+    }
+    &__link:hover{
+      color: getcolor('orange-color');
+    }
+  }

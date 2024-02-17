@@ -34,64 +34,62 @@
 
 .sellers-list {
     display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 16px;
+    }
 
     &__item {
-        margin-right: auto;
-        margin-left: auto;
+        &:nth-child(1) {
+            @media screen and (min-width: 1200px) {
+                max-width: 407px;
+            }
+
+        }
 
         &:nth-child(2) {
-            display: none;
-        }
-
-        &:last-child {
-            display: none;
-            margin-right: 0;
-        }
-
-        @media screen and (min-width: 768px) {
-            margin-right: 16px;
-
-            &:nth-child(2) {
+            @media screen and (min-width: 1200px) {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                column-gap: 16px;
             }
-        }
 
-        @media screen and (min-width: 1200px) {
-            &:last-child {
-                display: flex;
-                margin-right: 0;
-            }
         }
     }
 
     &__img {
-        margin: 0 auto 23px;
-        width: 100%;
+        margin-bottom:23px;
+        width: 335px;
         height: 464px;
-        margin: 0px 20px;
         border-radius: 15px;
 
         @media screen and (min-width:768px) {
-            width: 344px;
+            min-width: 344px;
+            margin-bottom:32px;
         }
 
         @media screen and (min-width:1200px) {
-            width: 368px;
+           min-width: 368px;
+        }
+
+        &--hidden {
+            display: none;
+            @media screen and (min-width:1200px) {
+                    display: inline;
+            }
         }
     }
 
     &__info {
-        flex-shrink: 0;
-        margin-bottom: 32px;
-        max-width: 290px;
+        color: getcolor('black-color');
         @include fonts(14px, 400, 1.29, normal);
 
-        @media screen and (min-width: 375px) {
-            max-width: 306px;
-        }
-
         @media screen and (min-width: 768px) {
-            margin-bottom: 0;
+            max-width: 306px;
         }
 
         @media screen and (min-width: 1200px) {
@@ -100,26 +98,22 @@
     }
 
     &__buy {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: normal;
+        color:getcolor('white-color');
+        margin: 0 auto;
         border-radius: 100px;
-        background: getcolor('orange-color');
+        background-color: getcolor('orange-color');
         border: none;
         width: 120px;
         height: 41px;
+        @include fonts(14px,600);
 
         @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center;
+            margin: 0 0 0 auto;
             width: 162px;
             height: 50px;
             padding-right: 40px;
             padding-left: 40px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            margin-left: auto;
+            font-size: 18px;
         }
     }
 }

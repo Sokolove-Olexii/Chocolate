@@ -59,14 +59,38 @@
         &__address {
             font-family: "Montserrat", sans-serif;
             color: getcolor('white-color');
-            @include fonts(1.29, -0.02em);
+            @include fonts($line-height: 1.29, $letter-spacing:-0.02em);
         }
     }
+    
+}
+
+.footer-socials {
+    display: inline-flex;
+    gap: 14px;
 
     &__svg {
-        width: 58px;
+        width: 22px;
         height: 22px;
         fill: getcolor('white-color');
     }
-    
+}
+
+.footer-pages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 32px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 24px;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    &__link {
+        color: getcolor('white-color');
+        @include fonts(14px, 500,  1.14);
+    }
+        
 }

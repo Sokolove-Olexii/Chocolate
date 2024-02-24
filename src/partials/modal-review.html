@@ -1,38 +1,32 @@
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" backdrop-review>
     <form class="review-modal">
-        <button class="review-modal__close" data-modal-close>
+        <div class="modal-review__container">
+        <button class="review-modal__close" data-close-review>
             <svg class="review-modal__svg">
                 <use href="./images/icons/symbol-defs.svg"></use>
             </svg>
         </button>
         <h2 class="review-modal__title">LEAVE A REVIEW ABOUT
-            <span class="review-modal__title">OUR CHOCOLATE</span>
+            <span class="review-modal__title--orange">OUR CHOCOLATE</span>
         </h2>
         <ul class="review-modal">
             <li class="review-modal__item">
-                <label class="review-modal__label">
-                    <input type="text" class="review-modal__input" placeholder="Name" cols="22" rows="1" required />
-                </label>
+                    <input type="text" class="review-modal__input" placeholder="Name" required />
             </li>
             <li class="review-modal__item">
-                <label class="review-modal__label">
-                    <input type="tel" class="review-modal__input" placeholder="Email" cols="22" rows="1" required />
-                </label>
+                    <input type="email" class="review-modal__input" placeholder="Email" required />
             </li>
             <li class="review-modal__item">
-                <label class="review-modal__label">
-                    <img class="review-modal__img" src="./images/icons/ukraine-flag.png">
+                    <img class="review-modal__img" src="./images/icons/ukraine-flag.png" alt="flag">
                     <p class="review-modal__number">+380</p>
-                    <input type="email" class="review-modal__input" cols="22" rows="1" placeholder="Phone Number"
+                    <input type="tel" class="review-modal__input review-modal__tel" placeholder="Phone Number"
                         required />
-                </label>
             </li>
             <li class="review-modal__item">
-                <label class="review-modal__label">
                     <textarea class="review-modal__textarea" cols="30" rows="10" placeholder="Enter text"></textarea>
-                </label>
             </li>
         </ul>
         <button type="submit" class="modal-review__submit">Send</button>
+    </div>
     </form>
 </div>

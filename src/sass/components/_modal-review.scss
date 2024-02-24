@@ -6,7 +6,7 @@
   z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: getcolor('black-color');
 }
 
 .review-modal {
@@ -35,7 +35,7 @@
   &__svg {
     width: 16px;
     height: 16px;
-    color: #000000;
+    color: getcolor('balck-color');
   }
   &__title {
       color: getcolor('black-color');

@@ -8,10 +8,13 @@
     text-transform: uppercase;
     text-align: center;
     @include fonts(20px, 600px, 1.2, normal, -0.03em);
-    &__orange {
+    &--orange {
         color: getcolor('orange-color');
     }
     @media screen and (min-width: 768px) {
+        @include fonts(24px, 600px, 1.17, normal, -0.03em);
+    }
+    @media screen and (min-width: 1200px) {
         @include fonts(24px, 600px, 1.17, normal, -0.03em);
     }
     
@@ -34,11 +37,23 @@
     }
     
     .video-play {
+        display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+        &__svg {
+            fill: getcolor('white-color');
+            width: 14px;
+            height: 15px;
+        }
     }
 
     .video-info {

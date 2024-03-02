@@ -6,7 +6,7 @@
     }
 
     @media screen and (min-width:1200px) {
-        padding: 133px 33px 133px;
+        padding: 133px 0 133px;
     }
 
 
@@ -48,8 +48,9 @@
                 max-width: 407px;
             }
         }
+    }
 
-        &:nth-child(2) {
+        &__item:nth-child(2) {
             @media screen and (min-width: 1200px) {
                 display: flex;
                 flex-wrap: wrap;
@@ -57,7 +58,6 @@
                 column-gap: 16px;
             }
         }
-    }
 
     &__img {
         margin-bottom: 23px;
@@ -107,14 +107,11 @@
         @include fonts(18px, 600, 1.29, normal);
 
         @media screen and (min-width: 768px) {
+            margin: 0 0 0 auto;
             width: 162px;
             height: 50px;
             padding-right: 40px;
             padding-left: 40px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            margin: 0 0 0 auto;
         }
     }
 }

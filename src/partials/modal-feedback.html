@@ -1,17 +1,22 @@
 <div class="backdrop-feedback is-hidden">
-    <form class="modal-feedback">
-      <button class="modal-feedback-btn" data-close-thanks>
+    <section class="modal-feedback">
+      <button type="button" class="modal-feedback-btn" data-close-thanks>
         <svg class="modal-feedback-btn__svg" width="8" height="8">
           <use href="./images/icons/symbol-defs.svg#icon-close"></use>
         </svg>
       </button>
-      <h1 class="modal-feedback__title">thank you for your feedback!</h1>
-      <p class="modal__text">We are so happy to hear from you!</p>
-      <img
-        src="./images/sellers/pop-up/chocolate-pop-up.png"
+      <h2 class="modal-feedback__title">thank you for your feedback!</h2>
+      <p class="modal-feedback__text">We are so happy to hear from you!</p>
+      <picture>
+        <source media="(min-width:768px)" srcset="./images/review/modal-chocolate-desktop@1x.png 1x, ./images/review/modal-chocolate-desktop@2x.png 2x"> 
+        <source media="(max-width:767px)" srcset="./images/review/modal-mobile-chocolate@2x.png 1x, ./images/review/modal-mobile-chocolate@2x.png 2x">
+        <img
+        src="./images/review/modal-chocolate-desktop@1x.png"
         alt="chocolate"
-        class="modal__img"
+        class="modal-feedback__img"
       />
-    </form>
+      </picture>
+      
+    </section>
   </div>
   

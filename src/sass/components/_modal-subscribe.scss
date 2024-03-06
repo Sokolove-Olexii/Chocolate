@@ -12,7 +12,7 @@
     height: 100%;
 }
 
-.modal-subscribe {
+.modal {
     border-radius: 15px;
     width: 311px;
     height: 350px;
@@ -22,20 +22,6 @@
     padding: 200px 24px 32px 24px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    // &__background {
-    //     @extend %bg-img;
-    //     width: 311px;
-    //     height: 169px;
-    //     background-image: url("../images/subscribe/subscribe-btn/choc-subscribe.jpg");
-    // }
-
-    &::before {
-        content: '';
-        @extend %bg-img;
-        width: 311px;
-        height: 169px;
-        background-image: url("../images/subscribe/subscribe-btn/choc-subscribe.jpg");
-    }
 
     &__btn-close {
     position: absolute;
@@ -63,13 +49,13 @@
      }
  }
 
-// &__img {
-//     width: 311px;
-//     height: 169px;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
+&__img {
+    width: 311px;
+    height: 169px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
  &__title {
     font-family: 'font-family', sans-serif;
@@ -86,13 +72,6 @@
    &__input {
     width: 263px;
     height: 45px;
-    border-radius: 50px;
-    color: rgba(255, 255, 255, 0.70);
-    position: relative;
-    top: 0;
-    right: 0;
-    padding-left: 18px;
-    border: none;
    }
 
    &__submit {
@@ -106,6 +85,5 @@
     text-align: center;
     color: getcolor('white-color');
     background-color: getcolor('orange-color');
-    position: absolute;
    }
 }

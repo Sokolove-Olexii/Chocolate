@@ -28,17 +28,19 @@
         font-size: 20px;
 font-weight: 600;
 line-height: 24px;
-letter-spacing: -2%;
+letter-spacing: -0.28px;
 margin-bottom: 8px;
+max-width: 229px;
 @media screen and (min-width:768px){
     font-size: 24px;
     line-height: 28px;
+    max-width: 276px;
 }   
     }
     &__text {
         color: getcolor('white-color');
-        @include fonts($letter-spacing: -2%);
-        max-width: 230px;
+        @include fonts($letter-spacing: -0.28px);
+        max-width: 166px;
         @media screen and (min-width:768px){
             max-width: 309px;
             @include fonts(18px);

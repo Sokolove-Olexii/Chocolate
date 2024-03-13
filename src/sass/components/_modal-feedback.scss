@@ -10,7 +10,7 @@
 }
 
 .modal-feedback {
-    position: fixed;
+    position: relative;
     padding: 84px 24px 170px 68px;
     z-index: 100;
     max-width: 516px;
@@ -53,13 +53,13 @@ margin-bottom: 8px;
     }
 }   
 
-.modal-feedback__btn {
+.modal-feedback-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 14;
-    right: 14;
+    top: 14px;
+    right: 14px;
     background-color: getcolor('hover-color');
     width: 28px;
     height: 28px;
@@ -68,8 +68,8 @@ margin-bottom: 8px;
     @media screen and (min-width:768px){
         width: 38px;
         height: 38px;
-        top: 24;
-        right: 26;
+        top: 24px;
+        right: 26px;
     }
     &__svg {
         fill: getcolor('orange-color');

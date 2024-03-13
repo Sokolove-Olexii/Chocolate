@@ -1,23 +1,25 @@
 .backdrop-buy {
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
-    background-color: getcolor('black-color');
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: auto;
+    background-color: #0000001e;
 }
 
 .modal-buy {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    overflow: hidden;
     transform: translate(-50%, -50%);
     width: 311px;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: auto;
     background-color: getcolor('white-color');
-    padding: 48px 48px 48px 48px;
+    padding: 32px 24px;
+    height: 90vh;
 
     &::-webkit-scrollbar {
         width: 0;
@@ -30,33 +32,40 @@
 
     }
 
-    @media screen and (min-width: 1200px) {
-        height: 800px;
-    }
-
     &__close {
         position: absolute;
-        top: -30px;
-        right: -30px;
+        top: 14px;
+        right: 14px;
         border: none;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5px;
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+
+        @media screen and (min-width: 768px) {
+            top: 24px;
+            right: 24px;
+            width: 28px;
+            height: 28px;
+        }
     }
 
     &__svg {
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
+        fill: #111;
 
         @media screen and (min-width: 768px) {
-            width: 20px;
-            height: 20px;
+            width: 14px;
+            height: 14px;
         }
     }
 
     &__title {
-        color: getcolor('white-color');
+        color: getcolor('black-color');
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -64,6 +73,7 @@
         letter-spacing: -0.6px;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 32px;
 
         @media screen and (min-width: 768px) {
             font-size: 24px;
@@ -95,28 +105,65 @@
 
 }
 
-.modal-buy-list{
+.buy-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 32px;
-    margin-bottom: 40px;
+    overflow: scroll;
+    padding-bottom: 14px;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
 
     &__item {
         padding: 32px 32px 28px 32px;
         padding-bottom: 10px;
-        width: 210px;
-        height: 220px;
+        min-width: 232px;
         border-radius: 15px;
-        border: 1px solid getcolor('black-color');
+        border: 1px solid rgba(17, 17, 17, 0.05);
         background-color: getcolor('white-color');
-        margin-right: 20px;
 
         @media screen and (min-width: 768px) {
             padding: 24px 20px 18px 20px;
-            width: 160px;
-            height: 190px;
-            margin-right: 16px;
+            min-width: 160px;
+        }
+    }
+
+    &__img {
+        width: 167px;
+        height: 148px;
+        margin: 0 auto 16px;
+
+        @media screen and (min-width: 768px) {
+            width: 120px;
+            height: 107px;
+            margin: 0 auto 14px;
+        }
+    }
+
+    &__button {
+        width: 96px;
+        height: 33px;
+        margin: 0 auto;
+        border-radius: 100px;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        background-color: getcolor('layout-bg');
+    }
+}
+
+.modal-buy-list {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        &__item:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &__item:nth-child(1) .modal-buy-list__label {
+            width: 246px;
         }
     }
 
@@ -127,7 +174,6 @@
         font-weight: 500;
         line-height: 116.667%;
         letter-spacing: -0.24px;
-        margin-bottom: 8px;
 
         @media screen and (min-width: 768px) {
             font-size: 14px;
@@ -136,102 +182,19 @@
         }
     }
 
-    &__inputfirst {
-        border-radius: 8px;
-        border: 1.5px solid getcolor('black-color');
-        width: 100%;
-        padding: 14px 18px;
-
-        &:active,
-        &:focus {
-            border: 2px solid getcolor('orange-color');
-        }
-
-        &::placeholder {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: -0.28px;
-            color: getcolor('black-color');
-
-            @media screen and (min-width: 768px) {
-                font-size: 18px;
-                letter-spacing: -0.36px;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            border-radius: 13px;
-            border: 1.5px solid getcolor('black-color');
-            padding: 22px 24px;
-            margin-right: 20px;
-            width: 246px;
-
-        }
-    }
-
-    &__inputsecond {
-        display: block;
-        border-radius: 8px;
-        border: 1.5px solid getcolor('black-color');
-        width: 100%;
-        padding: 14px 18px;
-        margin-top: 14px;
-
-        &:active,
-        &:focus {
-            border: 2px solid getcolor('orange-color');
-        }
-
-        &::placeholder {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: -0.28px;
-            color: rgba(64, 64, 64, 0.3);
-
-            @media screen and (min-width: 768px) {
-                font-size: 18px;
-                letter-spacing: -0.36px;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            border-radius: 13px;
-            border: 1.5px solid getcolor('black-color');
-            padding: 22px 24px;
-            margin-right: 20px;
-            width: 246px;
-            margin-top: 25px;
-        }
-
-    }
-
-    &__text {
-        color: getcolor('white-color');
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.16;
-        letter-spacing: -0.24px;
-        margin-top: 18px;
-        margin-bottom: 8px;
-
-        @media screen and (min-width: 768px) {
-            font-size: 14px;
-            line-height: 1.28;
-            letter-spacing: -0.28px;
-            margin-top: 21px;
-        }
-    }
-
     &__input {
+        outline: none;
         border-radius: 8px;
-        border: 1.5px solid getcolor('black-color');
+        border: 1.5px solid rgba(17, 17, 17, 0.05);
         width: 100%;
-        padding: 14px 18px;
+        padding: 14px;
+        box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+        margin: 8px 0 18px;
+
+        @media screen and (min-width: 768px) {
+            padding: 22px 24px;
+            border-radius: 13px;
+        }
 
         &:active,
         &:focus {
@@ -251,54 +214,106 @@
                 letter-spacing: -0.36px;
             }
         }
-
     }
 
-    &__submit {
+
+    &__textarea {
+        outline: none;
+        border: 1.5px solid rgba(17, 17, 17, 0.05);
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 8px;
+        height: 91px;
+        resize: none;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+        margin: 8px 0 0;
+
+        &:active,
+        &:focus {
+            border: 2px solid getcolor('orange-color');
+        }
+
+        &::placeholder {
+            color: getcolor('black-color');
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.28px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 18px;
+                letter-spacing: -0.36px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 137px;
+            padding: 22px 24px;
+        }
+    }
+
+}
+
+.phone {
+    &-label {
+        position: relative;
+    }
+
+    &-input {
+        padding-left: 54px;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 80px;
+        }
+    }
+
+    &-img {
+        width: 24px;
+        height: 18px;
         position: absolute;
+        top: 35px;
+        left: 18px;
+
+        @media screen and (min-width: 768px) {
+            width: 32px;
+            height: 24px;
+            top: 43px;
+            left: 24px;
+        }
+    }
+}
+
+.card {
+    &-label {
+        position: relative;
+    }
+
+    &-input {
+        padding-right: 55px;
+
+        @media screen and (min-width: 768px) {
+            padding-right: 55px;
+        }
+    }
+
+    &-img {
         width: 32px;
         height: 21px;
-        bottom: 0;
+        position: absolute;
+        top: 35px;
         right: 14px;
 
         @media screen and (min-width: 768px) {
             width: 44px;
             height: 30px;
+            top: 43px;
             right: 24px;
-            bottom: -4px;
         }
     }
+}
 
-    &__textarea {
-        border: 1.5px solid getcolor('black-color');
-        width: 100%;
-        padding: 14px 18px 60px 18px;
-        border-radius: 8px;
-
-        &:active,
-        &:focus {
-            border: 2px solid getcolor('orange-color');
-        }
-
-        &::placeholder {
-            color: getcolor('black-color');
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: -0.28px;
-
-            @media screen and (min-width: 768px) {
-                font-size: 18px;
-                letter-spacing: -0.36px;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            width: 513px;
-            padding: 22px 24px 93px 24px;
-            border-radius: 13px;
-        }
-    }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

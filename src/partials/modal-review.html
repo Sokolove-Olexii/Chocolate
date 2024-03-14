@@ -16,13 +16,15 @@
                     <input type="email" class="review-list__input" placeholder="Email" required />
             </li>
             <li class="review-list__item">
-                    <input type="tel" class="review-list__input review-list__tel" placeholder="Phone Number" required />
+                <label class="review-list__label">
                     <img class="review-list__img" src="./images/icons/ukraine-flag.png" alt="flag">
+                    <input type="tel" class="review-list__input review-list__input--tel" placeholder="Phone Number" required />
+                </label>
             </li>
             <li class="review-list__item">
                     <textarea class="review-list__textarea" cols="30" rows="10" placeholder="Enter text"></textarea>
             </li>
         </ul>
-        <button type="button" class="review-modal__btn" data-close-review data-open-feedback>Send</button>
+        <button type="button" class="review-modal__submit" data-close-review data-open-feedback>Send</button>
     </form>
 </div>

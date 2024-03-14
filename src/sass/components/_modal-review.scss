@@ -1,12 +1,11 @@
 .backdrop-review {
   position: fixed;
-  display: flex;
   top: 0;
   left: 0;
   z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.158);
+  background-color: rgba(0, 0, 0, 0.404);
   overflow: auto;
 }
 
@@ -18,13 +17,11 @@
   width: 311px;
   border-radius: 15px;
   overflow: auto;
-  background-color: getcolor('white-color');
+  background-color: getcolor('layout-bg');
   padding: 32px 24px;
-
   @media screen and (min-width: 768px) {
     width: 517px;
     padding: 40px;
-
   }
 
   &__close {
@@ -41,10 +38,9 @@
 
     @media screen and (min-width: 768px) {
       width: 28px;
+      height: 28px;
       top: 24px;
       right: 24px;
-      height: 28px;
-
     }
   }
 
@@ -52,11 +48,9 @@
     width: 12px;
     height: 12px;
     fill: #111;
-
     @media screen and (min-width: 768px) {
       width: 14px;
       height: 14px;
-
     }
   }
 
@@ -82,19 +76,14 @@
     }
   }
 
-  &__btn {
+  &__submit {
+    border: none;
+    background-color: getcolor('orange-color');
     padding: 12px 28px;
     border-radius: 100px;
     color: getcolor('white-color');
-    border: none;
-    background-color: getcolor('orange-color');
-    font-size: 14px;
     font-weight: 600;
-
-    &:hover {
-      border-radius: 50%;
-    }
-
+    font-size: 14px;
     @media screen and (min-width: 768px) {
       padding: 14px 40px;
     }
@@ -115,14 +104,9 @@
   &__input {
     width: 100%;
     padding: 14px 18px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.28px;
-    align-self: stretch;
     border-radius: 8px;
-    border: 1.5px solid getcolor('gray-color');
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
 
     &:active,
     &:focus {
@@ -134,20 +118,37 @@
       border-radius: 13px;
     }
 
+    &::placeholder {
+      color: getcolor('gray-color');
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.28px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+    }
+
+    &--tel {
+      padding-left: 60px;
+    }
+  }
+
+  &__label {
+    position: relative;
   }
 
   &__img {
+    position: absolute;
+    top: 0;
+    left: 18px;
     width: 24px;
     height: 18px;
-    position: absolute;
-    top: 35px;
-    left: 18px;
-
     @media screen and (min-width: 768px) {
       width: 32px;
       height: 24px;
-      top: 43px;
-      left: 24px;
     }
   }
 
@@ -168,20 +169,25 @@
   }
 
   &__textarea {
-    display: block;
     width: 100%;
-    border-radius: 13px;
-    border: 1.5px solid getcolor('black-color');
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.28px;
-    margin-bottom: 18px;
-    padding: 14px 18px 60px 18px;
-    margin-top: 14px;
+    height: 91px;
+    resize: none;
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+    padding: 14px 18px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
 
     &::placeholder {
       color: getcolor('gray-color');
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.28px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
     }
 
     &:active,
@@ -190,10 +196,9 @@
     }
 
     @media screen and (min-width: 768px) {
-      padding: 22px 24px 93px 24px;
-      margin-top: 19px;
-      font-size: 18px;
-      letter-spacing: -0.36px;
+      padding: 22px 24px;
+      height: 137px;
+      border-radius: 13px;
     }
   }
 }

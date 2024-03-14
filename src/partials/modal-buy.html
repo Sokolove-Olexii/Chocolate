@@ -4,20 +4,21 @@
       <svg class="modal-buy__svg">
         <use href="./images/icons/symbol-defs.svg#icon-close"></use>
       </svg>
-      <h2 class="modal-buy__title"><span class="modal-buy__title--orange">BUY</span> NOW
-        <ul class="modal-buy-list">
-          <li class="modal-buy-list__item">
-            <img class="modal-buy-list__img" src="./images/sellers/buy-now/chocolate-1.png" alt="chocolate">
-          </li>
-          <p class="modal-buy-list__text">100g</p>
-          <li class="modal-buy-list__item">
-            <img class="modal-buy-list__img" src="./images/sellers/buy-now/chocolate-2.png" alt="chocolate">
-          </li>
-          <p class="modal-buy-list__text">200g</p>
-          <li class="modal-buy-list__item">
-            <img class="modal-buy-list__img" src="./images/sellers/buy-now/chocolate-3.png" alt="chocolate">
-          </li>
-          <p class="modal-buy-list__text">300g</p>
+      </button>
+      <h2 class="modal-buy__title"><span class="modal-buy__title--orange">BUY</span> NOW</h2>
+        <ul class="buy-list">
+          <li class="buy-list__item">
+            <img class="buy-list__img" src="./images/sellers/buy-now/chocolate-1.png" alt="chocolate">
+          <button type="button" class="buy-list__button">100g</button>
+        </li>
+          <li class="buy-list__item">
+            <img class="buy-list__img" src="./images/sellers/buy-now/chocolate-2.png" alt="chocolate">
+          <button type="button" class="buy-list__button">200g</button>
+        </li>
+          <li class="buy-list__item">
+            <img class="buy-list__img" src="./images/sellers/buy-now/chocolate-3.png" alt="chocolate">
+          <button type="button" class="buy-list__button">300g</button>
+        </li>
         </ul>
         <ul class="modal-buy-list">
           <li class="modal-buy-list__item">
@@ -29,21 +30,20 @@
             </label>
           </li>
           <li class="modal-buy-list__item">
-            <label class="modal-buy-list__label">
+            <label class="modal-buy-list__label">Email
               <input type="email" class="modal-buy-list__input" placeholder="Enter your email" cols="22" rows="1"
                 required />
             </label>
           </li>
           <li class="modal-buy-list__item">
-            <label class="modal-buy-list__label">Phone number
-              <img class="modal-buy-list__img" src="./images/icons/ukraine-flag.png">
-              <p class="modal-buy-list__number">+380</p>
-              <input type="email" class="modal-buy-list__input" cols="22" rows="1" placeholder="Phone Number"
+            <label class="modal-buy-list__label phone-label">Phone number
+              <img class="phone-img" src="./images/icons/ukraine-flag.png">
+              <input type="tel" class="modal-buy-list__input phone-input" cols="22" rows="1" placeholder="Phone Number"
                 required />
             </label>
-            <label class="modal-buy-list__label">Card number
-              <input type="email" class="modal-buy-list__input" cols="22" rows="1" placeholder="Card Number" required />
-              <img class="modal-buy-list__img" src="./images/icons/Mastercard.png">
+            <label class="modal-buy-list__label card-label">Card number
+              <input type="number" class="modal-buy-list__input card-input" cols="22" rows="1" placeholder="Card Number" required />
+              <img class="card-img" src="./images/icons/Mastercard.png">
             </label>
           </li>
           <li class="modal-buy-list__item">
@@ -51,7 +51,8 @@
               <textarea class="modal-buy-list__textarea" cols="30" rows="10" placeholder="Enter text"></textarea>
             </label>
           </li>
-          <button type="submit" class="modal-buy__submit" data-open-thanks>Submit</button>
+          </ul>
+          <button type="button" class="modal-buy__submit" data-close-buy data-open-thanks>Submit</button>
   </form>
 </div>
   

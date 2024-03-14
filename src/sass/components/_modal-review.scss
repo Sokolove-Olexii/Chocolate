@@ -14,13 +14,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 100;
-  border-radius: 15px;
-  background-color: getcolor('layout-bg');
   width: 311px;
-  padding: 32px 24px 32px 24px;
+  border-radius: 15px;
   overflow: auto;
-
+  background-color: getcolor('layout-bg');
+  padding: 32px 24px;
   @media screen and (min-width: 768px) {
     width: 517px;
     padding: 40px;
@@ -49,8 +47,7 @@
   &__svg {
     width: 12px;
     height: 12px;
-    color: getcolor('balck-color');
-
+    fill: #111;
     @media screen and (min-width: 768px) {
       width: 14px;
       height: 14px;
@@ -87,7 +84,6 @@
     color: getcolor('white-color');
     font-weight: 600;
     font-size: 14px;
-
     @media screen and (min-width: 768px) {
       padding: 14px 40px;
     }
@@ -119,6 +115,7 @@
 
     @media screen and (min-width: 768px) {
       padding: 22px 24px;
+      border-radius: 13px;
     }
 
     &::placeholder {
@@ -149,10 +146,25 @@
     left: 18px;
     width: 24px;
     height: 18px;
-
     @media screen and (min-width: 768px) {
       width: 32px;
       height: 24px;
+    }
+  }
+
+  &__tel {
+    position: relative;
+    border-radius: 13px;
+    border: 1.5px solid getcolor('gray-color');
+    max-width: 263px;
+    padding-left: 105px;
+
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 513px;
+      padding-left: 125px;
     }
   }
 
@@ -185,12 +197,8 @@
 
     @media screen and (min-width: 768px) {
       padding: 22px 24px;
-      margin-top: 19px;
-      font-size: 18px;
-      letter-spacing: -0.36px;
       height: 137px;
       border-radius: 13px;
     }
-
   }
 }

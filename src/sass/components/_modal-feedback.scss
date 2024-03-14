@@ -10,7 +10,7 @@
 }
 
 .modal-feedback {
-    position: fixed;
+    position: relative;
     padding: 84px 24px 170px 68px;
     z-index: 100;
     max-width: 516px;
@@ -28,17 +28,19 @@
         font-size: 20px;
 font-weight: 600;
 line-height: 24px;
-letter-spacing: -2%;
+letter-spacing: -0.28px;
 margin-bottom: 8px;
+max-width: 229px;
 @media screen and (min-width:768px){
     font-size: 24px;
     line-height: 28px;
+    max-width: 276px;
 }   
     }
     &__text {
         color: getcolor('white-color');
-        @include fonts($letter-spacing: -2%);
-        max-width: 230px;
+        @include fonts($letter-spacing: -0.28px);
+        max-width: 166px;
         @media screen and (min-width:768px){
             max-width: 309px;
             @include fonts(18px);
@@ -50,16 +52,17 @@ margin-bottom: 8px;
         bottom: 0;
         width: 243px;
         height: 205px;
+        border-bottom-left-radius:14px;
     }
 }   
 
-.modal-feedback__btn {
+.modal-feedback-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 14;
-    right: 14;
+    top: 14px;
+    right: 14px;
     background-color: getcolor('hover-color');
     width: 28px;
     height: 28px;
@@ -68,8 +71,8 @@ margin-bottom: 8px;
     @media screen and (min-width:768px){
         width: 38px;
         height: 38px;
-        top: 24;
-        right: 26;
+        top: 24px;
+        right: 26px;
     }
     &__svg {
         fill: getcolor('orange-color');

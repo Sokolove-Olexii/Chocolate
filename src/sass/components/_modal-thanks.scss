@@ -9,7 +9,7 @@
     z-index: 99;
 }
 
-.modal {
+.modal-thanks {
     position: fixed;
     padding: 84px 24px 170px 68px;
     z-index: 100;
@@ -48,12 +48,17 @@ margin-bottom: 8px;
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 243px;
-        height: 205px;
+        width: 230px;
+        height: 202px;
+        border-bottom-left-radius:14px;
+        @media screen and (min-width:768px){
+            width: 300px;
+            height: 320px;
+        }
     }
 }   
 
-.modal-btn {
+.modal-thanks-btn {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -47,9 +47,11 @@
 .taste-list {
     @include flex($wrap: wrap);
     row-gap: 20px;
-    @media screen and (min-width:768px)and(max-width:1199px){
+
+    @media screen and (min-width:768px)and(max-width:1199px) {
         row-gap: 30px;
     }
+
     &__item {
         position: relative;
         border-radius: 5%;
@@ -89,7 +91,7 @@
             }
 
             &:hover {
-                border-color: none;
+                border: none;
             }
         }
 
@@ -112,9 +114,10 @@
             }
 
             &:hover {
-                border-color: none;
+                border: none;
             }
         }
+
         &:nth-child(4) .taste-back__filters {
             gap: 0;
             justify-content: space-between;
@@ -125,6 +128,7 @@
 .taste-front {
     width: 335px;
     height: 270px;
+    padding: 28px 20px 0;
 
     @media screen and (min-width:1200px) {
         width: 270px;
@@ -132,13 +136,9 @@
     }
 
     &__img {
-        margin: 28px 55px 0 55px;
         width: 224px;
         height: 171px;
-
-        @media screen and (min-width:1200px) {
-            margin: 28px 32px 0 32px;
-        }
+        margin: 0 auto;
     }
 
     &__title {
@@ -160,6 +160,7 @@
     background-color: getcolor('white-color');
     transform: translateY(-100%);
     overflow: auto;
+
     @media screen and (min-width:1200px) {
         overflow: hidden;
     }

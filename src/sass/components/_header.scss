@@ -14,7 +14,7 @@
     &__chocolate {
       @extend %center;
       font-family: 'Montserrat', sans-serif;
-      color: rgba(17,17,17);
+      color: rgba(17, 17, 17);
       @include fonts($font-weight: 700, $line-height: 18px, $font-size: 14px);
       @media screen and (min-width: 1200px) {
         @include fonts($font-weight: 700, $line-height: 20px, $font-size: 18px);
@@ -45,12 +45,17 @@
       height: 44px;
     }
     @media screen and (min-width: 1200px) {
-        display: none;
-      }
+      display: none;
+    }
     &__svg {
       width: 21px;
       height: 14px;
     }
+  }
+
+  &-menu:hover {
+    fill: getcolor('orange-color');
+    transition: fill 100ms;
   }
 
   &-navigation {
@@ -74,6 +79,10 @@
     color: getcolor('black-color');
     @include fonts($font-weight: 500, $line-height: 16px, $font-size: 14px);
   }
+  &__link:hover {
+    color: getcolor('orange-color');
+    transition: color 250ms;
+  }
 }
 
 .menu-right {
@@ -87,15 +96,19 @@
     flex-direction: row;
   }
 
-  &__twit{
+  &__link:hover {
+    cursor: pointer;
+    fill: getcolor('orange-color');
+    transition: fill 250ms;
+  }
+
+  &__twit {
     width: 22px;
     height: 18px;
   }
 
-  &__inst{
+  &__inst {
     width: 20px;
     height: 20px;
   }
-
 }
-
